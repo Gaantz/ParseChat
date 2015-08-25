@@ -9,19 +9,39 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
+@property (weak, nonatomic) IBOutlet UITextField *name;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)entrar:(id)sender
+{
+    PFUser *muser = [PFUser user];
+    muser.username = _name.text;
+    muser.password = @"default";
+    
+    [muser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (!error) {
+            [self performSegueWithIdentifier:@"toChat" sender:self];
+        } else {
+            [PFUser logInWithUsernameInBackground:_name.text password:@"default"
+            block:^(PFUser *user, NSError *error) {
+                if (user) {
+                    [self performSegueWithIdentifier:@"toChat" sender:self];
+                } else {
+                    NSLog(@"%@",[error userInfo][@"error"]);
+                }
+            }];
+        }
+    }];
 }
 
 @end

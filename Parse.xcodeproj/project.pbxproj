@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		402FA7691B8BD521006F9320 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 402FA7681B8BD521006F9320 /* ChatViewController.m */; };
-		40816FAA1B8BC13200378477 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40816FA71B8BC13100378477 /* Bolts.framework */; };
-		40816FAD1B8BC25300378477 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40816FA81B8BC13200378477 /* Parse.framework */; };
 		40816FAF1B8BC28D00378477 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40816FAE1B8BC28D00378477 /* Foundation.framework */; };
 		40816FB11B8BC2C200378477 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 40816FB01B8BC2C200378477 /* libstdc++.6.dylib */; };
 		40816FB31B8BC2CC00378477 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40816FB21B8BC2CC00378477 /* CoreLocation.framework */; };
@@ -30,6 +28,8 @@
 		40C684391B8BBB290046AE01 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40C684371B8BBB290046AE01 /* LaunchScreen.xib */; };
 		40C684451B8BBB290046AE01 /* ParseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C684441B8BBB290046AE01 /* ParseTests.m */; };
 		5638377A4C2B2164BF3B0093 /* libPods-Parse.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB01BD28D731DD487FC645AF /* libPods-Parse.a */; };
+		838CCB6F1B8C2DE0008452FA /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 838CCB6E1B8C2DE0008452FA /* Parse.framework */; };
+		838CCB711B8C2DE8008452FA /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 838CCB701B8C2DE8008452FA /* Bolts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,9 +46,6 @@
 		11C6B104EBF0ABE52F368891 /* Pods-Parse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parse.release.xcconfig"; path = "Pods/Target Support Files/Pods-Parse/Pods-Parse.release.xcconfig"; sourceTree = "<group>"; };
 		402FA7671B8BD521006F9320 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
 		402FA7681B8BD521006F9320 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
-		40816FA71B8BC13100378477 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../../../Downloads/parse-library-1.8.1/Bolts.framework"; sourceTree = "<group>"; };
-		40816FA81B8BC13200378477 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../../../../Downloads/parse-library-1.8.1/Parse.framework"; sourceTree = "<group>"; };
-		40816FA91B8BC13200378477 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "../../../../Downloads/parse-library-1.8.1/ParseUI.framework"; sourceTree = "<group>"; };
 		40816FAE1B8BC28D00378477 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		40816FB01B8BC2C200378477 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
 		40816FB21B8BC2CC00378477 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -74,6 +71,8 @@
 		40C6843E1B8BBB290046AE01 /* ParseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		40C684431B8BBB290046AE01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40C684441B8BBB290046AE01 /* ParseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParseTests.m; sourceTree = "<group>"; };
+		838CCB6E1B8C2DE0008452FA /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../../Downloads/parse-library-1.8.1/Parse.framework"; sourceTree = "<group>"; };
+		838CCB701B8C2DE8008452FA /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../Downloads/parse-library-1.8.1/Bolts.framework"; sourceTree = "<group>"; };
 		AB01BD28D731DD487FC645AF /* libPods-Parse.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Parse.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B388F0380AA27CA3464B3258 /* Pods-Parse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Parse/Pods-Parse.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,6 +82,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				838CCB711B8C2DE8008452FA /* Bolts.framework in Frameworks */,
+				838CCB6F1B8C2DE0008452FA /* Parse.framework in Frameworks */,
 				40816FC51B8BC31F00378477 /* CFNetwork.framework in Frameworks */,
 				40816FC11B8BC30500378477 /* AudioToolbox.framework in Frameworks */,
 				40816FC31B8BC31700378477 /* SystemConfiguration.framework in Frameworks */,
@@ -93,9 +94,7 @@
 				40816FBB1B8BC2EF00378477 /* QuartzCore.framework in Frameworks */,
 				40816FB71B8BC2DC00378477 /* CoreGraphics.framework in Frameworks */,
 				40816FB31B8BC2CC00378477 /* CoreLocation.framework in Frameworks */,
-				40816FAD1B8BC25300378477 /* Parse.framework in Frameworks */,
 				40816FAF1B8BC28D00378477 /* Foundation.framework in Frameworks */,
-				40816FAA1B8BC13200378477 /* Bolts.framework in Frameworks */,
 				40816FB11B8BC2C200378477 /* libstdc++.6.dylib in Frameworks */,
 				5638377A4C2B2164BF3B0093 /* libPods-Parse.a in Frameworks */,
 			);
@@ -129,9 +128,6 @@
 				40816FB21B8BC2CC00378477 /* CoreLocation.framework */,
 				40816FB01B8BC2C200378477 /* libstdc++.6.dylib */,
 				40816FAE1B8BC28D00378477 /* Foundation.framework */,
-				40816FA71B8BC13100378477 /* Bolts.framework */,
-				40816FA81B8BC13200378477 /* Parse.framework */,
-				40816FA91B8BC13200378477 /* ParseUI.framework */,
 				50273EBAEB354A8D169CB15D /* Pods */,
 				E158A9122B1A45AF27928328 /* Frameworks */,
 			);
@@ -201,6 +197,8 @@
 		E158A9122B1A45AF27928328 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				838CCB701B8C2DE8008452FA /* Bolts.framework */,
+				838CCB6E1B8C2DE0008452FA /* Parse.framework */,
 				AB01BD28D731DD487FC645AF /* libPods-Parse.a */,
 			);
 			name = Frameworks;
@@ -476,6 +474,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/cristian/Downloads/parse-library-1.8.1",
+					"/Users/Gaantz/Downloads/parse-library-1.8.1",
 				);
 				INFOPLIST_FILE = Parse/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -492,6 +491,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/cristian/Downloads/parse-library-1.8.1",
+					"/Users/Gaantz/Downloads/parse-library-1.8.1",
 				);
 				INFOPLIST_FILE = Parse/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -8,6 +8,7 @@
 
 #import <Parse/Parse.h>
 #import "AppDelegate.h"
+#import "ChatViewController.h"
 
 
 @interface AppDelegate ()
@@ -31,6 +32,30 @@
     [application registerUserNotificationSettings:settings];
     [application registerForRemoteNotifications];
     
+    
+    @try {
+        NSDictionary *notificationPayload = launchOptions[UIApplicationLaunchOptionsRemoteNotificationKey];
+        NSString *mensaje = [notificationPayload objectForKey:@"mensaje"];
+        NSDictionary *uinfo = @{@"mensaje": mensaje};
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"refreshView"
+                                                            object:nil
+                                                          userInfo:uinfo];
+    }
+    @catch (NSException *exception) {
+        
+    }
+
+    
+    
+//    PFObject *targetPhoto = [PFObject objectWithoutDataWithClassName:@"Photo"
+//                                                            objectId:photoId];
+//    [targetPhoto fetchIfNeededInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+//        // Show photo view controller
+//        if (!error) {
+//            ChatViewController *viewController = [[ChatViewController alloc] initWithPhoto:object];
+//            [self.navController pushViewController:viewController animated:YES];
+//        }
+//    }];
     
     
     return YES;
@@ -68,7 +93,44 @@
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
 {
+    /*
+     {
+     "alert": "PRUEBA",
+     "mensaje":
+     {
+     "senderId" : "-1",
+     "senderDisplayName" : "Admin",
+     "date" : "Now",
+     "text" : "Mensajon"
+     } ,
+     "sound": "chime",
+     "title": "Baseball News" 
+     }
+     */
+    
     [PFPush handlePush:userInfo];
+    NSString *mensaje = [userInfo objectForKey:@"mensaje"];
+
+    NSDictionary *uinfo = @{@"mensaje": mensaje};
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"refreshView"
+                                                        object:nil
+                                                      userInfo:uinfo];
+
+//    PFObject *targetPhoto = [PFObject objectWithoutDataWithClassName:@"Photo"   objectId:photoId];
+//    
+//    // Fetch photo object
+//    [targetPhoto fetchIfNeededInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+//        // Show photo view controller
+//        if (error) {
+//            handler(UIBackgroundFetchResultFailed);
+//        } else if ([PFUser currentUser]) {
+//            PhotoVC *viewController = [[PhotoVC alloc] initWithPhoto:object];
+//            [self.navController pushViewController:viewController animated:YES];
+//            handler(UIBackgroundFetchResultNewData);
+//        } else {
+//            handler(UIBackgroundModeNoData);
+//        }
+//    }];
 }
 
 @end

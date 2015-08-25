@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <JSQMessagesViewController/JSQMessages.h> 
+#import <Parse/Parse.h>
 
 @interface ViewController : UIViewController
 
